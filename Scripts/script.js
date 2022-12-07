@@ -7,4 +7,10 @@ let usChoice
 possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) =>{
     usChoice = e.target.id
     usChoiceDis.innerHTML = usChoice
+    generateCompChoice()
 }))
+
+function generateCompChoice(){
+    const randoNum = Math.floor(Math.random() * 3) 
+    console.log(randoNum)
+}
