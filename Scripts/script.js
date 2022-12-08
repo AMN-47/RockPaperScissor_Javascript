@@ -10,6 +10,7 @@ possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('cli
     usChoice = e.target.id
     usChoiceDis.innerHTML = usChoice
     generateCompChoice()
+    getResult()
 }))
 
 function generateCompChoice(){
@@ -39,7 +40,17 @@ function getResult(){
     if (comChoice === 'ROCK' && usChoice === "SCISSOR"){
         result = 'You Lost'
     }
-    if (comChoice === 'PAPER' && usChoice === "SCISSOR){
+    if (comChoice === 'PAPER' && usChoice === "SCISSOR"){
         result = 'You Win'
     }
+    if (comChoice === 'PAPER' && usChoice === "ROCK"){
+        result = 'You Lose'
+    }
+    if (comChoice === 'SCISSOR' && usChoice === "ROCK"){
+        result = 'You Win'
+    }
+    if (comChoice === 'SCISSOR' && usChoice ==="PAPER"){
+        result = 'You Lose'
+    }
+    showRes.innerHTML = result
 }
