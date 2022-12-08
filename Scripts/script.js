@@ -4,6 +4,7 @@ const showRes = document.getElementById('daRESULT')
 const possibleChoices = document.querySelectorAll('button')
 let usChoice
 let comChoice
+let result
 
 possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) =>{
     usChoice = e.target.id
@@ -26,4 +27,19 @@ function generateCompChoice(){
     }
     compChoiceDis.innerHTML = comChoice
 
+}
+
+function getResult(){
+    if (comChoice === usChoice){
+        result = 'it is a draw'
+    }
+    if (comChoice === 'ROCK' && usChoice === "PAPER"){
+        result = 'You Win'
+    }
+    if (comChoice === 'ROCK' && usChoice === "SCISSOR"){
+        result = 'You Lost'
+    }
+    if (comChoice === 'PAPER' && usChoice === "SCISSOR){
+        result = 'You Win'
+    }
 }
