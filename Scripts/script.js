@@ -19,10 +19,10 @@ function generateCompChoice(){
         comChoice = 'ROCK'
     }
     if (randoNum === 2){
-        comChoice = 'scissors'
+        comChoice = 'SCISSOR'
     }
     if (randoNum === 3){
-        comChoice = 'paper'
+        comChoice = 'PAPER'
     }
     compChoiceDis.innerHTML = comChoice
 
